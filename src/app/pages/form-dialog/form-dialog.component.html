@@ -1,0 +1,17 @@
+<div class="mainClass">
+  <h1 mat-dialog-title>Add Message</h1>
+  <mat-icon mat-dialog-close>clear</mat-icon>
+</div>
+<form [formGroup]="MessageForm">
+  <div mat-dialog-content>
+    <mat-form-field appearance="fill" [style.width.px]="440">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name"/> </mat-form-field
+    ><br />
+    <mat-form-field appearance="fill" [style.width.px]="440">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message" ></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="btnSave()">Save</button>
+  </div>
+</form>
